@@ -1,0 +1,204 @@
+%{
+#include "TaskOutput.hh"
+//MSH_include_begin
+#include "MarshaledMyString.h"
+//MSH_include_end
+%}
+
+// This file is generated automatically from TaskOutput.hh .  It is an
+//   intermediate file useful for debugging, but otherwise may be deleted.
+
+ marshaling class MarshaledTaskOutput (TaskOutput* param) {
+
+        MyString inDirName;
+    //FIELDMARSHAL:
+    {
+	MarshaledMyString var(&Shadowed_param->inDirName);
+	EXTEND_BUFFER(var.getBufferSize());
+	$SIZE = var.getBufferSize();
+	memcpy($$, var.getBuffer(), var.getBufferSize());
+    }
+    //FIELDUNMARSHAL:
+    {
+	MarshaledMyString var($$, 'u');
+	var.unmarshalTo(&Shadowed_param->inDirName);
+
+    }
+    //FIELDSIZE:
+    {
+	// no need to declare size since $SIZE is already assigned in the MARSHAL field
+
+    }
+
+        MyString outDirName;
+    //FIELDMARSHAL:
+    {
+	MarshaledMyString var(&Shadowed_param->outDirName);
+	EXTEND_BUFFER(var.getBufferSize());
+	$SIZE = var.getBufferSize();
+	memcpy($$, var.getBuffer(), var.getBufferSize());
+    }
+    //FIELDUNMARSHAL:
+    {
+	MarshaledMyString var($$, 'u');
+	var.unmarshalTo(&Shadowed_param->outDirName);
+
+    }
+    //FIELDSIZE:
+    {
+	// no need to declare size since $SIZE is already assigned in the MARSHAL field
+
+    }
+
+        MyString fileName;
+    //FIELDMARSHAL:
+    {
+	MarshaledMyString var(&Shadowed_param->fileName);
+	EXTEND_BUFFER(var.getBufferSize());
+	$SIZE = var.getBufferSize();
+	memcpy($$, var.getBuffer(), var.getBufferSize());
+    }
+    //FIELDUNMARSHAL:
+    {
+	MarshaledMyString var($$, 'u');
+	var.unmarshalTo(&Shadowed_param->fileName);
+
+    }
+    //FIELDSIZE:
+    {
+	// no need to declare size since $SIZE is already assigned in the MARSHAL field
+
+    }
+
+        double prevTemp;
+    //FIELDMARSHAL:
+    {
+	memcpy($$, &Shadowed_param->prevTemp, sizeof(double));
+    }
+    //FIELDUNMARSHAL:
+    {
+	memcpy(&Shadowed_param->prevTemp, $$, sizeof(double));
+
+    }
+    //FIELDSIZE:
+    {
+	$SIZE = sizeof(double);
+
+    }
+
+        double newTemp;
+    //FIELDMARSHAL:
+    {
+	memcpy($$, &Shadowed_param->newTemp, sizeof(double));
+    }
+    //FIELDUNMARSHAL:
+    {
+	memcpy(&Shadowed_param->newTemp, $$, sizeof(double));
+
+    }
+    //FIELDSIZE:
+    {
+	$SIZE = sizeof(double);
+
+    }
+
+        bool ascii;
+    //FIELDMARSHAL:
+    {
+	memcpy($$, &Shadowed_param->ascii, sizeof(bool));
+    }
+    //FIELDUNMARSHAL:
+    {
+	memcpy(&Shadowed_param->ascii, $$, sizeof(bool));
+
+    }
+    //FIELDSIZE:
+    {
+	$SIZE = sizeof(bool);
+
+    }
+
+        bool log;
+    //FIELDMARSHAL:
+    {
+	memcpy($$, &Shadowed_param->log, sizeof(bool));
+    }
+    //FIELDUNMARSHAL:
+    {
+	memcpy(&Shadowed_param->log, $$, sizeof(bool));
+
+    }
+    //FIELDSIZE:
+    {
+	$SIZE = sizeof(bool);
+
+    }
+
+        bool overWrite;
+    //FIELDMARSHAL:
+    {
+	memcpy($$, &Shadowed_param->overWrite, sizeof(bool));
+    }
+    //FIELDUNMARSHAL:
+    {
+	memcpy(&Shadowed_param->overWrite, $$, sizeof(bool));
+
+    }
+    //FIELDSIZE:
+    {
+	$SIZE = sizeof(bool);
+
+    }
+
+        int index;
+    //FIELDMARSHAL:
+    {
+	memcpy($$, &Shadowed_param->index, sizeof(int));
+    }
+    //FIELDUNMARSHAL:
+    {
+	memcpy(&Shadowed_param->index, $$, sizeof(int));
+
+    }
+    //FIELDSIZE:
+    {
+	$SIZE = sizeof(int);
+
+    }
+
+        double duration;
+    //FIELDMARSHAL:
+    {
+	memcpy($$, &Shadowed_param->duration, sizeof(double));
+    }
+    //FIELDUNMARSHAL:
+    {
+	memcpy(&Shadowed_param->duration, $$, sizeof(double));
+
+    }
+    //FIELDSIZE:
+    {
+	$SIZE = sizeof(double);
+
+    }
+
+        bool success;
+    //FIELDMARSHAL:
+    {
+	memcpy($$, &Shadowed_param->success, sizeof(bool));
+    }
+    //FIELDUNMARSHAL:
+    {
+	memcpy(&Shadowed_param->success, $$, sizeof(bool));
+
+    }
+    //FIELDSIZE:
+    {
+	$SIZE = sizeof(bool);
+
+    }
+	unmarshaling constructor {
+	$THIS = new TaskOutput();
+	}
+}
+
